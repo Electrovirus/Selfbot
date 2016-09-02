@@ -213,7 +213,6 @@ function create_config( )
   config = {
     enabled_plugins = {
     "BotMod",
-    "Contact",
     "Fun",
     "GpMod",
     "Help",
