@@ -220,7 +220,8 @@ function create_config( )
     "Leave",
     "Plugins",
     "PmAll",
-    "Saveplug"
+    "Saveplug",
+    "Terminal"
     },
     sudo_users = {184018132},--Sudoer
     moderation = {data = 'data/moderation.json'},
