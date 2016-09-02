@@ -298,6 +298,7 @@ local  file = download_to_file(url,'text.jpg')
 end
 end
 end
+end
 return {               
 patterns = {
    "^[!/]([Ee]moji) (.+)$", 
