@@ -212,20 +212,16 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "set",
-    "get",
-    "onservice",
-    "plugins",
-    "plugins",
-    "FunTools",
-    "id",
-    "help",
-    "dl-file",
-    "savefile",
-    "groupmanager",
-    "on-off",
-    "version",
-    "solid"
+    "BotMod",
+    "Contact",
+    "Fun",
+    "GpMod",
+    "Help",
+    "Id",
+    "Leave",
+    "Plugins",
+    "PmAll",
+    "Saveplug"
     },
     sudo_users = {184018132},--Sudoer
     moderation = {data = 'data/moderation.json'},
