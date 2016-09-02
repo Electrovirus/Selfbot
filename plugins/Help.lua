@@ -132,7 +132,7 @@ My Channel : �@Ev_official 😎
 ➖➖➖➖➖➖]]
     if matches[1] == 'help' and is_sudo(msg) then
       send_large_msg("user#id"..msg.from.id, help)      
-   return 'Help was sent in your private message'
+   return 'Help was sent in your Pv☑'
     end
 end 
 
