@@ -216,6 +216,8 @@ function create_config( )
     "Fun",
     "GpMod",
     "Channel",
+    "CmdSet",
+    "CmdDel",
     "Help",
     "Id",
     "Leave",
