@@ -215,6 +215,7 @@ function create_config( )
     "BotMod",
     "Fun",
     "GpMod",
+    "Channel",
     "Help",
     "Id",
     "Leave",
