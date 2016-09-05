@@ -1,13 +1,13 @@
 do
 function run(msg, matches)
   if matches[1] == 'id' then
-return "Your id : "..msg.from.id.." 
+return "Your id : "..msg.from.id..""
 end
   if matches[1] == 'gid'
-return "Group id : "..msg.to.id.."  
+return "Group id : "..msg.to.id..""  
 end
   if matches[1] == 'phone'
-return "Your phoneNumber : "..(msg.from.phone or '404 \nI dont have your number').."
+return "Your phoneNumber : "..(msg.from.phone or '404 \nI dont have your number')..""
 end
 end
 end
