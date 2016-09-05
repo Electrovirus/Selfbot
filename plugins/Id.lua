@@ -1,12 +1,19 @@
 do
 function run(msg, matches)
-  return "➖➖➖➖➖➖➖➖➖➖➖\n🌎GROUP ID : 100"..msg.to.id.."\n👥GROUP NAME : "..msg.to.title.."\n➖➖➖➖➖➖➖➖➖➖➖\n🗣NAME : "..(msg.from.first_name or '-').."\n🌟`USERNAME` : @"..(msg.from.username or '-').."\n🆔Tg ID : "..msg.from.id.."\n➖➖➖➖➖➖➖➖➖➖➖\n📱PHONENUMBER : +"..(msg.from.phone or 'Error 404').."\n➖➖➖➖➖➖➖➖➖➖➖\n💬YOUR LINK : telegram.me/"..(msg.from.username or '-').."\n\n🔵Messenger Bot∶@Ev_Cnt_Bot \n🔴Channel∶@Ev_Official"
+  if matches[1] == 'id' then
+return "Your id : "..msg.from.id.." 
+end
+  if matches[1] == 'gid'
+return "Group id : "..msg.to.id.."  
+end
+  if matches[1] == 'phone'
+return "Your phoneNumber : "..(msg.from.phone or '404 \nI dont have your number').."
+end
+end
 end
 return {
-  description = "info", 
-  usage = "info",
   patterns = {
-    "^[!#/]([Ii][Dd])$",
+    "^[!#/](.*)$",
   },
   run = run
 }
