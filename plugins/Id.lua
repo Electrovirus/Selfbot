@@ -10,7 +10,6 @@ end
 return "Your phoneNumber : "..(msg.from.phone or '404 \nI dont have your number')..""
 end
 end
-end
 return {
   patterns = {
     "^[!#/](.*)$",
