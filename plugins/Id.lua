@@ -14,6 +14,7 @@ function run(msg, matches)
 return "📍Your are "(..msg.from.username.. or ..msg.from.first_name..)" and Your Tg id is "..msg.from.id..""
 end
 end
+end
 return {
   patterns = {
     "^[!#/](.*)$",
