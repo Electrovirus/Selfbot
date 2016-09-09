@@ -11,9 +11,8 @@ return "📍Your phoneNumber : +"..(msg.from.phone or '404 \nI dont have your nu
 end
 function run(msg, matches)
   if matches[1] == 'me' then
-return "📍Your are "(..msg.from.username.. or ..msg.from.first_name..)" and Your Tg id is "..msg.from.id..""
+return "📍Your are "(..msg.from.username.. or ..msg.from.first_name..)" and Your Tg id is "..msg.from.id.."" end
 end
-
 end
 return {
   patterns = {
