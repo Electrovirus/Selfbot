@@ -1,5 +1,5 @@
 local function channelhelp(msg,matches)
-if not is_admin1(msg) then
+if not is_sudo(msg) then
 return false
 end
 local channel = "takween"..msg.from.id
@@ -28,10 +28,10 @@ local reply = "😌Hi "..msg.from.first_name.."\n \n Your Channel 🖥 Has Been 
 
   return {
   patterns = {
-     "^(setch) (.+)",
-     "^(delch)",
-     "^(mych)",
-     "^(send) (.+)"
+     "^[!/#](setch) (.+)",
+     "^[!/#](delch)",
+     "^[!/#](mych)",
+     "^[!/#](send) (.+)"
   },
   run = channelhelp,
 }
