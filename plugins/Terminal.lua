@@ -1,6 +1,10 @@
 local function run(msg, matches)
+ if is_sudo then
 local text = io.popen(matches[1]):read('*all')
-if is_sudo(msg) then
+  return text
+end
+ if not is_sudo
+local text = "🚫Needs sudo acces\n🔋Local sudo∶Electrovirus"
   return text
 end
   end
