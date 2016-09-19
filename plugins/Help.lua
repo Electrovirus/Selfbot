@@ -1,7 +1,7 @@
 do
     
 function run(msg, matches)
-  local help = [[Hese neveshtan nabood :)
+  local help = [[No help text :)
 👇
 ➖➖➖➖➖➖
 My Channel : @Ev_official 😎
