@@ -224,7 +224,8 @@ function create_config( )
     "Plugins",
     "PmAll",
     "Saveplug",
-    "Terminal"
+    "Terminal",
+    "AntiSpam"
     },
     sudo_users = {184018132},--Sudoer
     moderation = {data = 'data/moderation.json'},
