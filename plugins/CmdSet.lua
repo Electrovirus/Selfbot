@@ -9,7 +9,7 @@ local function save_value(msg, name, value)
   end
   if hash then
     redis:hset(hash, name, value)
-    return "Done!"
+    return "↪️Done!"
   end
 end
 local function get_variables_hash(msg)
@@ -33,7 +33,7 @@ end
 local function run(msg, matches)
 if matches[1]:lower() == 'setcommand' then
   if not is_sudo(msg) then
-    return "Ev only!"
+    return "↪️Ev only!"
   end
   local name = string.sub(matches[2], 1, 50)
   local value = string.sub(matches[3], 1, 1000)
