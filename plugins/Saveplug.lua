@@ -25,7 +25,7 @@ end
 end
 return {
   patterns = {
- "^[!/#](saveplug) (.*)$",
+ "^[!/#](saveplugin) (.*)$",
   },
   run = run,
 }
