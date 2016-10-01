@@ -227,7 +227,7 @@ function create_config( )
     "Terminal"
     },
     sudo_users = {184018132},--Sudoer
-    friend_users = {},--friends 
+    friend_users = {89776826},--friends 
     moderation = {data = 'data/moderation.json'},
     about_text = [[]],
     help_text_realm = [[]],
