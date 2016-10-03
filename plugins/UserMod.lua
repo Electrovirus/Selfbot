@@ -75,16 +75,16 @@ end
 
 local function run(msg, matches) 
              if is_sudo(msg) then
-		if matches[1]:lower() == "pvblock" then
+		if matches[1]:lower() == "block" then
 				local receiver = get_receiver(msg)
 			if type(msg.reply_id) ~= "nil" then
 				local receiver = get_receiver(msg)
 				block = get_message(msg.reply_id, block_by_reply, {receiver = receiver, msg = msg})
-			elseif matches[1]:lower() == "pvblock" and string.match(matches[2], '^%d+$') then
+			elseif matches[1]:lower() == "block" and string.match(matches[2], '^%d+$') then
 				local user_id = matches[2]
     reply_msg(msg.id, "User "..user_id.." has been blocked", ok_cb, true)
 block_user("user#id"..user_id,ok_cb,false)
-			elseif matches[1]:lower() == "pvblock" and not string.match(matches[2], '^%d+$') then
+			elseif matches[1]:lower() == "block" and not string.match(matches[2], '^%d+$') then
 				local receiver = get_receiver(msg)
 				local username = matches[2]
 				local username = string.gsub(matches[2], '@', '')
@@ -92,15 +92,15 @@ block_user("user#id"..user_id,ok_cb,false)
 			end
 		end
 
-		if matches[1]:lower() == "pvunblock" then
+		if matches[1]:lower() == "unblock" then
 			if type(msg.reply_id) ~= "nil" then
 				local receiver = get_receiver(msg)
 				unblock = get_message(msg.reply_id, unblock_by_reply, {receiver = receiver, msg = msg})
-			elseif matches[1]:lower() == "pvunblock" and string.match(matches[2], '^%d+$') then
+			elseif matches[1]:lower() == "unblock" and string.match(matches[2], '^%d+$') then
       local user_id = matches[2]
     reply_msg(msg.id, "User "..user_id.." has been unblocked", ok_cb, true)
 unblock_user("user#id"..user_id,ok_cb,false)
-			elseif matches[1]:lower() == "pvunblock" and not string.match(matches[2], '^%d+$') then
+			elseif matches[1]:lower() == "unblock" and not string.match(matches[2], '^%d+$') then
 				local receiver = get_receiver(msg)
 				local username = matches[2]
 				local username = string.gsub(matches[2], '@', '')
@@ -191,12 +191,13 @@ return {
         "^[!/#](unsilent) (.*)$",
         "^[!/#](silentlist)$",
         "^[!/#](clean) (.*)$",
-        "^[!/#](pvblock)$",
-        "^[!/#](pvblock) (.*)$",
-        "^[!/#](pvunblock)$",
-        "^[!/#](pvunblock) (.*)$",
+        "^[!/#](block)$",
+        "^[!/#](block) (.*)$",
+        "^[!/#](unblock)$",
+        "^[!/#](unblock) (.*)$",
     },
       run = run,
 pre_process = pre_process
 }
 end
+--Dev by Electrovirus
