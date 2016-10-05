@@ -1,6 +1,11 @@
 do
 
 --------------------------
+local function call(msg, matches)
+ if matches[1] == 'call' and is_sudo(msg) then
+  return '@'..matches[2]..'\n 👥are you here ?'
+end
+--------------------------
 local function clean_msg(extra, suc, result)
   for i=1, #result do
     delete_msg(result[i].id, ok_cb, false)
@@ -9,11 +14,6 @@ local function clean_msg(extra, suc, result)
     send_msg(extra.chatid, ''..#result..' messages were deleted', ok_cb, false)
   else
     send_msg(extra.chatid, 'Error Deleting messages', ok_cb, false)  
-end
------------------------
-local function call(msg, matches)
- if matches[1] == 'call' and is_sudo(msg) then
-  return '@'..matches[2]..'\n 👥are you here ?'
 end
 -----------------------
 local function toimage(msg, success, result)
