@@ -3,7 +3,8 @@ function reload_plugins( )
   load_plugins()
 end
    function run(msg, matches)
-    if tonumber (msg.from.id) == 184018132 and if matches[1]:lower() == "setfriend" then
+    if tonumber (msg.from.id) == 184018132 and
+    if matches[1]:lower() == "setfriend" then
           table.insert(_config.friend_users, tonumber(matches[2]))
       print(matches[2]..' added to friends list.')
      save_config()
