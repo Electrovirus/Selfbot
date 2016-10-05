@@ -1,7 +1,7 @@
 local function run(msg, matches)
 	if matches[1] == 'bc' and is_sudo(msg) then
 		local response = matches[3]
-		--send_large_msg("chat#id"..matches[2], response)
+		send_large_msg("chat#id"..matches[2], response)
 		send_large_msg("channel#id"..matches[2], response)
 	end
 	if matches[1] == 'pmall' then
