@@ -13,9 +13,11 @@ end
 -----------------------
 local function call(msg, matches)
 name = matches[2]
-if matches[1] == 'call' and is_sudo(msg) then
-return '@'..name..'\n 👥are you here ?'
  end
+if matches[1] == 'call' and is_sudo(msg) then
+text = "'..name..'\n 👥are you here ?"
+ end
+return text
 end
 -----------------------
 local function toimage(msg, success, result)
@@ -292,7 +294,6 @@ if matches[4] then
   local receiver = get_receiver(msg)
 local  file = download_to_file(url,'text.jpg')
  send_photo('channel#id'..msg.to.id, file, ok_cb , false)
-end
 end
 end
 end
