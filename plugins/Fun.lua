@@ -16,6 +16,7 @@ function run(msg, matches)
     if msg.to.type == 'channel' then
       return  "👥 @"..matches[2].."\nAre you here ?" 
       end
+end
 --------------------------
 local function clean_msg(extra, suc, result)
   for i=1, #result do
