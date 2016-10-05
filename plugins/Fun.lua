@@ -9,7 +9,6 @@ local function clean_msg(extra, suc, result)
     send_msg(extra.chatid, ''..#result..' messages were deleted', ok_cb, false)
   else
     send_msg(extra.chatid, 'Error Deleting messages', ok_cb, false)  
- end
 end
 -----------------------
 local function call(msg, matches)
@@ -293,6 +292,8 @@ if matches[4] then
   local receiver = get_receiver(msg)
 local  file = download_to_file(url,'text.jpg')
  send_photo('channel#id'..msg.to.id, file, ok_cb , false)
+end
+end
 end
 end
 return {               
