@@ -15,6 +15,7 @@ local function call(msg, matches)
 if matches[1] == 'call' and is_sudo(msg) then
 return '@'..matches[2]..'\n 👥are you here ?'
 end
+end
 -----------------------
 local function toimage(msg, success, result)
   local receiver = get_receiver(msg)
