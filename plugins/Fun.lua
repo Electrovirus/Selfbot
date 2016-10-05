@@ -14,9 +14,10 @@ end
 -----------------------
 local function call(msg, matches)
 name = matches[2]
-if matches[1] == 'call' and if is_sudo(msg) then
+if matches[1] == 'call' and 
+if is_sudo(msg) then
 return "@"..name.."\n"#"..name.."\n 👥are you here ?"
- end
+end
 end
 -----------------------
 local function toimage(msg, success, result)
