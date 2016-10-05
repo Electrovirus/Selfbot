@@ -13,9 +13,7 @@ end
 -----------------------
 local function call(msg, matches)
 if matches[1] == 'call' and is_sudo(msg) then
-text = '@'..matches[2]..'\n 👥are you here ?'
- end
-return text
+return '@'..matches[2]..'\n 👥are you here ?'
 end
 -----------------------
 local function toimage(msg, success, result)
