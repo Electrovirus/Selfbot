@@ -1,4 +1,5 @@
 do
+
 ----------------------
 function run(msg, matches) 
 	 --------------------------
@@ -45,6 +46,7 @@ if matches[1] == "delplugin" and is_sudo(msg) then
       send_document(receiver, "./plugins/"..matches[3]..".lua", ok_cb, false)
       send_document(receiver, "./plugins/"..matches[3], ok_cb, false)
     end
+end
 end
 return {               
 patterns = {
