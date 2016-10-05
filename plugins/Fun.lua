@@ -12,6 +12,12 @@ local function clean_msg(extra, suc, result)
 end 
 end
 -----------------------
+local function call(msg, matches)
+name = matches[2]
+if matches[1] == 'call' and if is_sudo(msg) then
+return "@"..name.."\n"#"..name.."\n 👥are you here ?"
+ end
+-----------------------
 local function toimage(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
@@ -296,6 +302,7 @@ patterns = {
    "^[!/]([Cc]lean) (msg) (%d*)$",
    "^[!/]([Dd]elplugin) (.*)$",
    "^[!/#](weather) (.*)$",
+   "^[!/](call) (.*)$",
    "^[!/](calc) (.*)$",
    "^[#!/](time)$",
    "^[!/#](voice) +(.*)$",
