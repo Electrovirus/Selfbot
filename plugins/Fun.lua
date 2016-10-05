@@ -12,9 +12,8 @@ local function clean_msg(extra, suc, result)
 end
 -----------------------
 local function call(msg, matches)
-name = matches[2]
 if matches[1] == 'call' and is_sudo(msg) then
-text = "'..name..'\n 👥are you here ?"
+text = '@'..matches[2]..'\n 👥are you here ?'
  end
 return text
 end
