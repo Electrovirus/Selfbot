@@ -40,7 +40,6 @@ local function tosticker(msg, success, result)
     send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
   end
 end
-
 ------------------------
 local function get_weather(location)
   print("Finding weather in ", location)
