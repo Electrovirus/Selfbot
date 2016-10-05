@@ -17,7 +17,6 @@ end
       return matches[2]..' removed from friends list.'
       end
    end
-end
 return {
 patterns = {
 "^[!/#]([Ss]etfriend) (%d+)$",
