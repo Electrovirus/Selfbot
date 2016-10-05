@@ -1,16 +1,6 @@
 do
 
 --------------------------
-function run(msg, matches) 
-	 --------------------------
-  if matches[1] == 'call' and is_sudo(msg) then
-    if msg.to.type == "user" then 
-      return "Groups only🔰"
-      end
-    else
-      return  "👥 @"..matches[2].."\nAre you here ?" 
-      end
---------------------------
 local function clean_msg(extra, suc, result)
   for i=1, #result do
     delete_msg(result[i].id, ok_cb, false)
