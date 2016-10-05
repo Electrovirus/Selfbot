@@ -1,11 +1,21 @@
 do
 
 --------------------------
-local function call(msg, matches)
- if matches[1] == 'call' and is_sudo(msg) then
-  return '@'..matches[2]..'\n 👥are you here ?'
- end
-end
+function run(msg, matches) 
+	 --------------------------
+  if matches[1] == 'call' and is_sudo(msg) then
+    if msg.to.type == "user" then 
+      return "Groups only🔰"
+      end
+    if msg.to.type == 'chat' then
+      return  "👥 @"..matches[2].."\nAre you here ?" 
+      end
+    if not is_sudo(msg) then 
+      return 
+      end
+    if msg.to.type == 'channel' then
+      return  "👥 @"..matches[2].."\nAre you here ?" 
+      end
 --------------------------
 local function clean_msg(extra, suc, result)
   for i=1, #result do
