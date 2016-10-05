@@ -294,7 +294,6 @@ local  file = download_to_file(url,'text.jpg')
  send_photo('channel#id'..msg.to.id, file, ok_cb , false)
 end
 end
-end
 return {               
 patterns = {
    "^[!/]([Aa]ddplugin) (.+) (.*)$",
