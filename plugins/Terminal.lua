@@ -9,6 +9,9 @@ local text = "⏹Needs sudo acces\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 end
   end
 return {
+  usage = {
+    '$ cmd : run commands in linux'
+  },
   patterns = {
     '^$(.*)$'
   },
