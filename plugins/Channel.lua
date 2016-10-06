@@ -27,6 +27,11 @@ local reply = "😌Hi "..msg.from.first_name.."\n \n Your Channel 🖥 Has Been 
                    end
 
   return {
+  usage = {
+    '!setch (channel id): Set current channel',
+    '!delch : Delete current channel',
+    '!mych : Show current channel',
+    '!send (post) : Send posts to channels'
   patterns = {
      "^[!/#](setch) (.+)",
      "^[!/#](delch)",
