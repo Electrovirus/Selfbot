@@ -14,6 +14,9 @@ local receiver = get_receiver(msg)
 end
  
 return {
+  usage = {
+    '!left : leave th group'
+  },
   patterns = {
     "^[#!/](left)$",
     "^!!tgservice (.+)$",
