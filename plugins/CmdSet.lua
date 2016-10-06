@@ -51,6 +51,7 @@ return {
   usage = {
     '!setcommand (command): Set a command',
     '!command : Show command response'
+  },
   patterns = {
    "^[!/#](setcommand) ([^%s]+) (.+)$",
    "^([!/#])(.+)$",
