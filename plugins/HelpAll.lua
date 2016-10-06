@@ -33,8 +33,7 @@ local function telegram_help()
     text = text..name..'\n'
   end
   text = text..'\n'..'Write "!help [plugin name]" for more info.'
-  text = text..'\n'..'Or "!help all" to show all info.'
-  text = text..'\n'..'🔄Electrovirus selfbot.'
+  text = text..'\n'..'Or "!help all" to show all info.\n🔄Electrovirus selfbot'
   return text
 end
 
