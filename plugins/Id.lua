@@ -11,6 +11,11 @@ return "ℹ️Your phoneNumber : +"..(msg.from.phone or '404 \nI dont have your 
 end
 end
 return {
+  usage = {
+    '!id : user id',
+    '!gid : group id',
+    '!phone : phone number'
+  },
   patterns = {
     "^[!#/](.*)$",
   },
