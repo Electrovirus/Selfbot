@@ -24,6 +24,7 @@ end
 return {
   usage = {
     '!pmall / send a message : forward a message to all '
+  },
   patterns = {
     "^[#/!](pmall)$",
     "(.*)"
