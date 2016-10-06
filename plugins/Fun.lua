@@ -290,13 +290,23 @@ end
 end
 end
 return {               
-  usage = {
-    '!addplugin (text) (pluginname.lua) : add a plugins ',
-    '!delplugin (plugin name) : Delete a plugin ',
-    '!dl plugin (plugin name) : ',
-    '!time : Show local time',
-    'Other patterns in plugins'
-  },
+usage = {
+   "^[!/]([Aa]ddplugin) (.+) (.*)$",
+    "^[!/]([Dd]l) ([Pp]lugin) (.*)$",
+   "^[!/]([Cc]lean) (msg) (%d*)$",
+   "^[!/]([Dd]elplugin) (.*)$",
+   "^[!/#](weather) (.*)$",
+   "^[!/](calc) (.*)$",
+   "^[#!/](time)$",
+   "^[!/#](voice) +(.*)$",
+   "^[!/]([Tt]r) ([^%s]+) (.*)$",
+   "^[!/]([Mm]ean) (.*)$",
+   "^[!/]([Ss]hort) (.*)$",
+   "^[#!/]([Ss]ticker)$",
+   "^[#!/](photo)$",
+     "^[!/](photo) (.+)$",
+    "^[!/](sticker) (.+)$",
+ }, 
 patterns = {
    "^[!/]([Aa]ddplugin) (.+) (.*)$",
     "^[!/]([Dd]l) ([Pp]lugin) (.*)$",
