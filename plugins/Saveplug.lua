@@ -24,6 +24,8 @@ load_document(msg.reply_id, saveplug, {msg=msg,name=name})
 end
 end
 return {
+  usage = {
+ '!saveplugin (name) : Save a plugins by reply'
   patterns = {
  "^[!/#](saveplugin) (.*)$",
   },
