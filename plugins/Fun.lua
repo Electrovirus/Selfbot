@@ -290,6 +290,11 @@ end
 end
 end
 return {               
+  usage = {
+    '!addplugin (text) (pluginname.lua) : add a plugins ',
+    '!delplugin (plugin name) : Delete a plugin ',
+    '!dl plugin (plugin name) : ',
+    '!time : Show local time'
 patterns = {
    "^[!/]([Aa]ddplugin) (.+) (.*)$",
     "^[!/]([Dd]l) ([Pp]lugin) (.*)$",
