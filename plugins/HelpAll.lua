@@ -34,6 +34,7 @@ local function telegram_help()
   end
   text = text..'\n'..'Write "!help [plugin name]" for more info.'
   text = text..'\n'..'Or "!help all" to show all info.'
+  text = text..'\n'..'🔄Electrovirus selfbot.'
   return text
 end
 
@@ -47,10 +48,12 @@ local function help_all()
 end
 
 local function run(msg, matches)
-  if matches[1] == "!help" then
+  if matches[1] == "!help" and is_sudo(msg) then
     return telegram_help()
   elseif matches[1] == "!help all" then
     return help_all()
+  elseif matches[1] == "!help" and not is_sudo(msg) then
+    return "🔀You can use these commands as a member👥\n!Contact : to contact @Electrovirus\n!id : to see your id\n🔄Electrovirus selfbot"
   else 
     local text = plugin_help(matches[1])
     if not text then
