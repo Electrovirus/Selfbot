@@ -49,6 +49,7 @@ return {
   usage = {
     '!app (appname): Search for an application',
     '!appinfo (appnum): Application info'
+  },
 patterns = {
   "^[!/#]([Aa][Pp][Pp]) (.*)$",
   "^[!/#]([Aa][Pp][Pp][Ii][Nn][Ff][Oo]) (%d+)$",
