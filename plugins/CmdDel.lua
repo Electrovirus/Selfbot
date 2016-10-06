@@ -25,6 +25,8 @@ if matches[1]:lower() == 'delcmd' then
 end
 end
 return {
+  usage = {
+    '!delcmd (cmd response): Delete a command'
   patterns = {
    "^[!/#](delcmd) ([^%s]+) (.+)$",
    "^[!/#](delcmd) ([^%s])$",
