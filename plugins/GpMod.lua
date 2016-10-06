@@ -286,6 +286,25 @@ local function pre_process (msg)
 end
 
 return {
+    usage = {
+        '^[!/#](setname) (.*)$',
+        '^[!/#](link)$',
+        '^[!/#](tosuper)$',
+        '^[!/#](newlink)$',
+        '^[!/#](setlink) (.*)$',
+        '^[!/#](setdes) (.*)$',
+        "^[!/#](kick)$",
+        "^[!/#](kick) (.*)$",
+        "^[!/#](silent)$",
+        "^[!/#](silent) (.*)$",
+        "^[!/#](unsilent)$",
+        "^[!/#](unsilent) (.*)$",
+        "^[/!#](mute all)$",
+        "^[/!#](unmute all)$",
+		     "^[/!#](mute status)$",
+        "^[!/#](inv)$",
+        "^[!/#](inv) (.*)$",
+    },
     patterns = {
         '^[!/#](setname) (.*)$',
         '^[!/#](link)$',
