@@ -184,6 +184,18 @@ local user_id = msg.from.id
   return msg
 end
 return {
+    usage = {
+        "^[!/#](silent)$",
+        "^[!/#](silent) (.*)$",
+        "^[!/#](unsilent)$",
+        "^[!/#](unsilent) (.*)$",
+        "^[!/#](silentlist)$",
+        "^[!/#](clean) (.*)$",
+        "^[!/#](block)$",
+        "^[!/#](block) (.*)$",
+        "^[!/#](unblock)$",
+        "^[!/#](unblock) (.*)$",
+    },
     patterns = {
         "^[!/#](silent)$",
         "^[!/#](silent) (.*)$",
