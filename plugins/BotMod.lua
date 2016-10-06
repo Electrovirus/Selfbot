@@ -75,8 +75,8 @@ end
 return {
 	description = "Plugin to manage channels. Enable or disable channel.", 
 	usage = {
-		"/channel enable: enable current channel",
-		"/channel disable: disable current channel" },
+		"!bot on: enable current group",
+		"!bot off: disable current group" },
 	patterns = {
 		"^[!/][Bb]ot (on)",
 		"^[!/][Bb]ot (off)" }, 
