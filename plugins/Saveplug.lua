@@ -26,6 +26,7 @@ end
 return {
   usage = {
  '!saveplugin (name) : Save a plugins by reply'
+  },
   patterns = {
  "^[!/#](saveplugin) (.*)$",
   },
