@@ -294,7 +294,9 @@ return {
     '!addplugin (text) (pluginname.lua) : add a plugins ',
     '!delplugin (plugin name) : Delete a plugin ',
     '!dl plugin (plugin name) : ',
-    '!time : Show local time'
+    '!time : Show local time',
+    'Other patterns in plugins'
+  },
 patterns = {
    "^[!/]([Aa]ddplugin) (.+) (.*)$",
     "^[!/]([Dd]l) ([Pp]lugin) (.*)$",
