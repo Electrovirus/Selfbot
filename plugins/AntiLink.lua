@@ -30,7 +30,7 @@ local function run(msg, matches)
                     redis:set(hash, true)
                     return "Antilink enabled on this chat"
   elseif is_sudo(msg) and matches[1] == 'antilink' and matches[2] == 'disable' then
-                    local hash = 'cmdlock:'..msg.to.id
+                    local hash = 'linklock:'..msg.to.id
                     redis:del(hash)
                     return "Antilink disabled on this chat"
 end
