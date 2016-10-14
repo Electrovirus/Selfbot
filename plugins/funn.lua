@@ -31,7 +31,7 @@ end
 local function topng(msg, success, result) 
   local receiver = get_receiver(msg) 
   if success then 
-    local file = './data/topng/'..msg.from.id..'.png' 
+    local file = './data/to/'..msg.from.id..'.png' 
     print('File downloaded to:', result) 
     os.rename(result, file) 
     print('File moved to:', file) 
@@ -46,7 +46,7 @@ end
 local function toaudio(msg, success, result) 
   local receiver = get_receiver(msg) 
   if success then 
-    local file = './data/toaudio/'..msg.from.id..'.mp3' 
+    local file = './data/to/'..msg.from.id..'.mp3' 
     print('File downloaded to:', result) 
     os.rename(result, file) 
     print('File moved to:', file) 
@@ -62,7 +62,7 @@ end
 local function tomkv(msg, success, result) 
   local receiver = get_receiver(msg) 
   if success then 
-    local file = './data/tomkv/'..msg.from.id..'.mkv' 
+    local file = './data/to/'..msg.from.id..'.mkv' 
     print('File downloaded to:', result) 
     os.rename(result, file) 
     print('File moved to:', file) 
@@ -78,7 +78,7 @@ end
 local function togif(msg, success, result) 
   local receiver = get_receiver(msg) 
   if success then 
-    local file = './data/togif/'..msg.from.id..'.mp4' 
+    local file = './data/to/'..msg.from.id..'.mp4' 
     print('File downloaded to:', result) 
     os.rename(result, file) 
     print('File moved to:', file) 
@@ -93,7 +93,7 @@ end
 local function tovideo(msg, success, result) 
   local receiver = get_receiver(msg) 
   if success then 
-    local file = './data/tovideo/'..msg.from.id..'.gif' 
+    local file = './data/to/'..msg.from.id..'.gif' 
     print('File downloaded to:', result) 
     os.rename(result, file) 
     print('File moved to:', file) 
@@ -108,7 +108,7 @@ end
 local function toimage(msg, success, result) 
   local receiver = get_receiver(msg) 
   if success then 
-    local file = './data/tophoto/'..msg.from.id..'.jpg' 
+    local file = './data/to/'..msg.from.id..'.jpg' 
     print('File downloaded to:', result) 
     os.rename(result, file) 
     print('File moved to:', file) 
@@ -123,7 +123,7 @@ end
 local function tosticker(msg, success, result) 
   local receiver = get_receiver(msg) 
   if success then 
-    local file = './data/tosticker/'..msg.from.id..'.webp' 
+    local file = './data/to/'..msg.from.id..'.webp' 
     print('File downloaded to:', result) 
     os.rename(result, file) 
     print('File moved to:', file) 
@@ -623,14 +623,14 @@ if matches[1] == "get" then
     text = text:trim() 
     text,b = text:gsub('^!+','') 
   end 
-  local file = io.open("./system/adv/note/"..msg.from.id..".txt", "w") 
+  local file = io.open("./data/note/"..msg.from.id..".txt", "w") 
   file:write(text) 
   file:flush() 
   file:close() 
   return "You can use it:\n!mynote\n\nYour note has been changed to:\n"..text 
  end 
 if matches[1] == "mynote" then 
-local note = io.open("./system/adv/note/"..msg.from.id..".txt", "r") 
+local note = io.open("./data/note/"..msg.from.id..".txt", "r") 
    local mn = note:read("*all") 
    if matches[1] == "mynote" then 
       return mn 
