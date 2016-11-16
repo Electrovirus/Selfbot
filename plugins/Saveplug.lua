@@ -19,7 +19,7 @@ local function run(msg,matches)
    local name = matches[2]
       if matches[1] == "saveplug" and matches[2] and is_sudo(msg) then
 load_document(msg.reply_id, saveplug, {msg=msg,name=name})
-        return 'Plugin '..name..' has been saved.'
+        return '🔄Plugin '..name..' has been saved.'
     end
 end
 end
