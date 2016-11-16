@@ -213,16 +213,15 @@ function create_config( )
   config = {
     enabled_plugins = {
     "BotMod",
-    "Fun",
+    "FunMod",
     "GpMod",
-    "Channel",
+    "ChannelMod",
     "CmdSet",
     "CmdDel",
-    "Help",
+    "HelpAll",
     "Id",
     "Leave",
     "Plugins",
-    "PmAll",
     "Saveplug",
     "Terminal"
     },
