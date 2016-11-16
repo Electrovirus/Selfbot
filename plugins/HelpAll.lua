@@ -52,7 +52,7 @@ local function run(msg, matches)
   elseif matches[1] == "!help all" then
     return help_all()
   elseif matches[1] == "!help" and not is_sudo(msg) then
-    return "🔀You can use these commands as a member👥\n!Contact : to contact @Electrovirus\n!id : to see your id\n🔄Electrovirus selfbot"
+    return "🔀You can use these commands as a member👥\n!Contact : to contact Electrovirus\n!id : to see your id\n🔄Electrovirus selfbot"
   else 
     local text = plugin_help(matches[1])
     if not text then
