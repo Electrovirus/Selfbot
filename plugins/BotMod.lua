@@ -41,7 +41,7 @@ local function pre_process(msg)
 	
 	-- If sender is moderator then re-enable the channel
 	if is_sudo(msg) then
-	  if msg.text == "/bot on" or msg.text == "/Bot on" or msg.text == "!bot on" or msg.text == "!Bot on" then
+	  if msg.text == "/power on" or msg.text == "/Power on" or msg.text == "!power on" or msg.text == "!Power on" then
 	  
 	    enable_channel(receiver)
 	  end
@@ -75,11 +75,11 @@ end
 return {
 	description = "Plugin to manage channels. Enable or disable channel.", 
 	usage = {
-		"!bot on: enable current group",
-		"!bot off: disable current group" },
+		"!power on: enable current group",
+		"!power off: disable current group" },
 	patterns = {
-		"^[!/][Bb]ot (on)",
-		"^[!/][Bb]ot (off)" }, 
+		"^[!/][Pp]ower (on)",
+		"^[!/][Pp]ower (off)" }, 
 	run = run,
 	--privileged = true,
 	moderated = true,
