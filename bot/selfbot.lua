@@ -214,7 +214,7 @@ function create_config( )
     enabled_plugins = {
     "BotMod",
     "FunMod",
-    "GpMod",
+    "GroupMod",
     "ChannelMod",
     "CmdSet",
     "CmdDel",
