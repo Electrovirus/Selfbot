@@ -26,7 +26,7 @@ end
 end
 return {
   usage = {
-    '!delcmd (cmd response): Delete a command'
+    '!delcmd (cmd response): Delete a cmd'
   },
   patterns = {
    "^[!/#](delcmd) ([^%s]+) (.+)$",
