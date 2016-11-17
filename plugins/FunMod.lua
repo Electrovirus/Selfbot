@@ -1,5 +1,6 @@
 
 do 
+if is_sudo(msg) then
 -------------------------- 
 local function savefile(extra, success, result) 
   local msg = extra.msg 
